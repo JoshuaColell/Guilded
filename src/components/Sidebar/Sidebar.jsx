@@ -5,7 +5,7 @@ import { Loader } from 'semantic-ui-react';
 import { ChatList, RailHeader } from 'components';
 
 export const Sidebar = () => {
-	const { myChats, createChatClick } = useChat();
+	const { myChats } = useChat();
 	const chatsResolved = useResolved(myChats);
 
 	return (
