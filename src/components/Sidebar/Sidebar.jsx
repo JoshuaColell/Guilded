@@ -19,7 +19,7 @@ export const Sidebar = () => {
 						</div>
 					) : (
 						<div className="chat-list-container no-chats-yet">
-							<h3>You haven't started a conversation yet...</h3>
+							<h3>No messages here yet...</h3>
 						</div>
 					)}
 				</>

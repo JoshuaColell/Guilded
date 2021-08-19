@@ -1,1 +1,1 @@
-Welcome to Guilded Chat's Source Code!
+Welcome to Guild's Source Code!

@@ -6,7 +6,7 @@ import { ImageUpload } from 'components';
 import { Icon, IconGroup, Image, Loader } from 'semantic-ui-react';
 
 export const RailHeader = () => {
-	const { chatConfig, createChatClick } = useChat();
+	const { chatConfig, createChatRoomClick } = useChat();
 	const configResolved = useResolved(chatConfig);
 	const inputRef = useRef(null);
 	const [image, setImage] = useState();
@@ -64,7 +64,7 @@ export const RailHeader = () => {
 					name="sign out"
 				/>
 				<Icon
-					onClick={createChatClick}
+					onClick={createChatRoomClick}
 					className="create-chat"
 					name="plus"
 				/>

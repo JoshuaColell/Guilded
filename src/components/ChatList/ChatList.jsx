@@ -36,7 +36,7 @@ export const ChatList = () => {
 								/>
 								<div className="chat-list-preview">
 									<div className="preview-username">
-										No One Added Yet
+										No one's here, just you.
 									</div>
 								</div>
 							</>

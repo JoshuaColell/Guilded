@@ -288,6 +288,7 @@ code {
 }
 .message-image {
 	width: 250px;
+	border-radius: 10px;
 }
 .message-avatar {
 	width: 35px;
@@ -360,9 +361,13 @@ code {
 	padding-bottom: 5px;
 	align-items: center;
 	justify-content: center;
+	transition: all 0.2s 0s ease;
 }
 .send-message-icon:hover {
-	background-color: #1f2026;
+	background-color: #1891fd;
+}
+.send-message-icon:hover > i {
+	color: white !important;
 }
 .user-search .input {
 	width: 100%;
@@ -428,7 +433,7 @@ code {
 
 .create-chat {
 	position: absolute;
-	top: 26px; /* Add 21 to this */
+	bottom: 10px; /* Add 21 to this */
 	right: 5px;
 	cursor: pointer;
 }

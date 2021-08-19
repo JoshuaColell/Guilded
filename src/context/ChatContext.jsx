@@ -9,9 +9,24 @@ export const ChatProvider = ({ children, authUser }) => {
 	const [chatConfig, setChatConfig] = useState();
 	const [selectedChat, setSelectedChat] = useState();
 
-	const createChatClick = () => {
-		newChat(chatConfig, { title: '' });
+	function getRandomString(length) {
+		var randomChars =
+			'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_-=+~';
+		var result = '';
+		for (var i = 0; i < length; i++) {
+			result += randomChars.charAt(
+				Math.floor(Math.random() * randomChars.length),
+			);
+		}
+		return result;
+	}
+
+	const createChatRoomClick = () => {
+		newChat(chatConfig, { title: `CHAT_ROOM_${getRandomString(12)}` });
+		console.log(`CHAT_ROOM_${getRandomString(12)}`);
+		console.log(`CHAT_ROOM_${getRandomString(12)}`);
 	};
+
 	const deleteChatClick = chat => {
 		const isAdmin = chat.admin.username === chatConfig.userName;
 
@@ -65,7 +80,7 @@ export const ChatProvider = ({ children, authUser }) => {
 				setSelectedChat,
 				selectChatClick,
 				deleteChatClick,
-				createChatClick,
+				createChatRoomClick,
 			}}
 		>
 			{children}
@@ -83,7 +98,7 @@ export const useChat = () => {
 		setSelectedChat,
 		selectChatClick,
 		deleteChatClick,
-		createChatClick,
+		createChatRoomClick,
 	} = useContext(ChatContext);
 
 	return {
@@ -95,6 +110,6 @@ export const useChat = () => {
 		setSelectedChat,
 		selectChatClick,
 		deleteChatClick,
-		createChatClick,
+		createChatRoomClick,
 	};
 };
