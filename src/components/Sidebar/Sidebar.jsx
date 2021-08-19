@@ -22,12 +22,6 @@ export const Sidebar = () => {
 							<h3>You haven't started a conversation yet...</h3>
 						</div>
 					)}
-					<button
-						className="create-chat-button"
-						onClick={createChatClick}
-					>
-						Create Chat
-					</button>
 				</>
 			) : (
 				<div className="chats-loading">

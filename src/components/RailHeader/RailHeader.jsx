@@ -6,7 +6,7 @@ import { ImageUpload } from 'components';
 import { Icon, IconGroup, Image, Loader } from 'semantic-ui-react';
 
 export const RailHeader = () => {
-	const { chatConfig } = useChat();
+	const { chatConfig, createChatClick } = useChat();
 	const configResolved = useResolved(chatConfig);
 	const inputRef = useRef(null);
 	const [image, setImage] = useState();
@@ -62,6 +62,11 @@ export const RailHeader = () => {
 					onClick={() => fb.auth.signOut()}
 					className="sign-out"
 					name="sign out"
+				/>
+				<Icon
+					onClick={createChatClick}
+					className="create-chat"
+					name="plus"
 				/>
 				{configResolved && !!chatConfig ? (
 					<div className="current-user-info">
